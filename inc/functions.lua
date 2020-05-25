@@ -1129,9 +1129,9 @@ return sendMsg(msg.chat_id_,msg.id_,'- ← عذراً البوت ليس مشرف
 else
 local lock_service = redis:get(dreem..'lock_service')
 if lock_service then 
-sendMsg(msg.chat_id_,msg.id_,'-  تـم تفعيـل المجمُوعة وتـم رفع جميع الادمنـية\n سورس دريـم @SourceDreem')
+sendMsg(msg.chat_id_,msg.id_,'⋆ تـم تفعيـل المجمُوعة \n⋆ @SourceDreem ⋆\n ⋆')
 else
-sendMsg(msg.chat_id_,msg.id_,'- تـم تفعـيل المجمُوعـة \n سورس دريـم @SourceDreem ')
+sendMsg(msg.chat_id_,msg.id_,'- تـم تفعـيل المجمُوعـة \n⋆ @SourceDreem ⋆')
 end
 GetChannelAdministrators(msg.chat_id_,function(arg,data)
 for k,v in pairs(data.members_) do
