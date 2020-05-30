@@ -1269,7 +1269,7 @@ if MsgText[1] == "ايدي" or MsgText[1]:lower() == "id" then
   if redis:get(dreem..'lock_id'..msg.chat_id_) then
   local msgs = redis:get(dreem..'msgs:'..msg.sender_user_id_..':'..msg.chat_id_) or 1
   GetUserID(msg.sender_user_id_,function(arg,data)
-  if data.username_ then UserNameID = "⋆ 𝚄𝚂𝙴𝚁 ⇠⇢ @"..data.username_.." \n" else UserNameID = "" end
+  if data.username_ then UserNameID = "⋆ يـوزرك ⟡ [@"..data.username_.."] \n" else UserNameID = "" end
   local zz = (redis:get(dreem..':User_Points:'..msg.chat_id_..msg.sender_user_id_) or 0)
   local rfih = (redis:get(dreem..':edited:'..msg.chat_id_..':'..msg.sender_user_id_) or 0)
   local Namei = FlterName(data.first_name_..' '..(data.last_name_ or ""),20)
@@ -1281,22 +1281,22 @@ if MsgText[1] == "ايدي" or MsgText[1]:lower() == "id" then
   ssssys = ali[math.random(#ali)]
   sendPhoto(msg.chat_id_,msg.id_,data.photos_[0].sizes_[1].photo_.persistent_id_,
   ''..ssssys..'\n'
-  ..'⋆ 𝚃𝙷𝙴 𝙽𝙰𝙼𝙴 ⇠⇢ '..Namei..' \n'
-  ..'⋆ 𝙸𝙳 ⇠⇢ '..msg.sender_user_id_..' \n'
+  ..'⋆ أسمّـك ⟡ '..Namei..' \n'
+  ..'⋆ ايديـك ⟡ ['..msg.sender_user_id_..'] \n'
   ..UserNameID
-  ..'⋆ 𝚁𝙰𝙽𝙺 ⇠⇢ '..msg.TheRank..' \n'
-  ..'⋆ 𝙼𝚂𝙶 ⇠⇢ '..msgs..'  \n'
-  ..'⋆ 𝙲𝙷𝙰 ⇠⇢ @SourceDreem'
+  ..'⋆ رتبـتك ⟡ '..msg.TheRank..' \n'
+  ..'⋆ رسائلك ⟡ '..msgs..'  \n'
+  ..'⋆ سَ ⟡ @SourceDreem'
   ,dl_cb,nil)
   else
   sendMsg(msg.chat_id_,msg.id_,
   '⋆️┐لا استطيع اظهار صوره بروفايلك لانك قمت بحظر البوت ...!\n'..'['..UserNameID..']'
-  ..'⋆ 𝚃𝙷𝙴 𝙽𝙰𝙼𝙴 ⇠⇢'..Namei..'. \n'
-  ..'⋆ 𝚁𝙰𝙽𝙺 ⇠⇢  '..msg.TheRank..'. \n'
-  ..'⋆ 𝙸𝙳 ⇠⇢ '..msg.sender_user_id_..'. \n'
+  ..'⋆ أسمّـك ⟡'..Namei..'. \n'
+  ..'⋆ رتبـتك ⟡  '..msg.TheRank..'. \n'
+  ..'⋆ ايديـك ⟡ '..msg.sender_user_id_..'. \n'
   ..UserNameID
-  ..'⋆ 𝙼𝚂𝙶 ⇠⇢ '..msgs..'. \n'
-  ..'⋆ 𝙲𝙷𝙰 ⇠⇢ @SourceDreem')
+  ..'⋆ رسائلك ⟡ '..msgs..'. \n'
+  ..'⋆ سَ ⟡ @SourceDreem')
   end
   end) 
   end ,nil)
